@@ -1,0 +1,21 @@
+//JAVASCRIPT to encrypt the text
+var a="GAMEOFTHRONES"; //Get the word from the function.
+var amount=3;////Get the key from the function.
+var temp2=""; //Setting the output string
+console.log(a); //Display your word.
+	for(var i=0;i<a.length;i++) //Iterate through the word
+	{
+	  var b=a[i]; //Get the first letter and store it in another variable
+	  var code=a.charCodeAt(i); //Get the ASCII Code of the letter
+	  if(code>=65 && code <=90) //Check if the letter is in UPPERCASE
+	  {
+		b=String.fromCharCode(code + amount);////Store the encrypted letter in the new variable
+		temp2+=b;////Append the letter to output string.
+		console.log(code);//Display the ASCII Code for the letter
+	  }
+	  else
+	  {
+		console.log("-");//If the letter is not in UPPERCASE, display a hyphen.
+	  }
+	}
+console.log(temp2);//Display the output text
