@@ -1,0 +1,8 @@
+//Javascript to check for Fibonacci series
+function fib(n) {//Here n is the user input.
+  if (n < 2){//Here we check if n is less than 2
+    return n
+  }
+  return fib(n - 1) + fib (n - 2) //Here we use the recursion to achieve the result, and we can log the data.
+ 
+}
