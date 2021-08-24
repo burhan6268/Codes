@@ -1,0 +1,29 @@
+//JAVASCRIPT to reduce the array.
+const exampleArray=['1','2','3','4','5']; //Initializing an Array
+
+console.log(Reduce(exampleArray,exampleReducer,0)); //Calling the Reduce method and passing the array
+
+
+function exampleReducer(acc,curr)
+{
+	return Number(acc) + Number(curr); //Storing the number
+}
+function Reduce(exampleArray,exampleReducer,initValue) //Using the reduce method
+{	
+	var temp=0;
+	for (var i=0; i<exampleArray.length;i++)
+	{
+		if(temp==0)
+		{
+		temp=exampleReducer(initValue,exampleArray[i]);
+		}
+		else
+		{
+		temp=exampleReducer(temp,exampleArray[i]);
+		}
+	//console.log(exampleArray[i]);
+	}
+	return temp;
+}
+
+
