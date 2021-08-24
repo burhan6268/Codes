@@ -1,0 +1,24 @@
+//JAVASCRIPT to check if the parenthesis are balanced.
+var a="(()()(()"; //Get a string
+var count1=0; //Counter 1 for Opening Parenthesis
+var count2=0; //Counter 2 for Closing Parenthesis
+	for(var i=0;i<a.length;i++) //Iterate through string
+	{
+	  if (a[i]=='(') //Check if it is an opening parenthesis
+	  {
+	  count1++;//If true, increment counter
+	  }
+	  else if (a[i]==')') //Check if it is a closing parenthesis
+	  {
+	  count2++; //If true, increment counter
+	  }
+	}
+	
+if(count1==count2)//Once string is finished, check if the number of brackets are equal
+{
+	return true;
+}
+else
+{
+	return false;
+}
