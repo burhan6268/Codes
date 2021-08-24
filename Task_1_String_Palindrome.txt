@@ -1,0 +1,13 @@
+//Javascript to check if string is palindrome
+var re = /[^A-Za-z0-9]/g; //Checking for all the characters globally
+var str=window.prompt(); //Getting the input from user
+str = str.toLowerCase().replace(re, ''); //Using the default toLowerCase method
+var len = str.length; //Getting the length of the string by user.
+for (var i = 0; i < len/2; i++) {
+  if (str[i] !== str[len - 1 - i]) 
+  {
+     alert("Not a Palindrome"); 
+     exit;
+   }
+  }
+alert("It is Palindrome")
